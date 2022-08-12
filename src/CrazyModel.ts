@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import { property } from 'lit/decorators.js';
 
 export default class CrazyModel extends LitElement {
   static styles = css`
@@ -84,14 +85,8 @@ export default class CrazyModel extends LitElement {
     }
   `;
 
-  static properties = {
-    content: {},
-    isCopyed: {},
-  };
-
-  content: string;
-
-  isCopyed = false;
+  @property({ type: String }) content = '';
+  @property({ type: Boolean }) isCopyed = false;
 
   async onCancel() {
     await navigator.clipboard.writeText(this.content);
@@ -117,7 +112,9 @@ export default class CrazyModel extends LitElement {
               I've gone crazy
             </button>
           </div>
-          <div class="ct-card__copy-icon ${this.isCopyed ? '' : 'transparent'}" />
+          <div
+            class="ct-card__copy-icon ${this.isCopyed ? '' : 'transparent'}"
+          />
         </div>
       </div>
     `;
