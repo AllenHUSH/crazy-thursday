@@ -4,6 +4,10 @@
   "description": "Crazy Thursday",
   "license": "MIT",
   "author": "allen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AllenHUSH/crazy-thursday"
+  },
   "scripts": {
     "dev": "vite",
     "build": "rimraf dist && rollup -c"
@@ -12,7 +16,8 @@
   "main": "dist/index.common.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist/**/*"
+    "dist/**/*",
+    "README.md"
   ],
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.3.4",
