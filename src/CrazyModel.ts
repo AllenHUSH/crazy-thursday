@@ -17,6 +17,8 @@ export default class CrazyModel extends LitElement {
     }
     .ct-card {
       min-width: 400px;
+      max-width: 800px;
+      box-sizing: border-box;
       background-color: #e0182e;
       color: #ffffff;
       top: 0;
